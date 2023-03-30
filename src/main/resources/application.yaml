@@ -1,0 +1,59 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.backbase: DEBUG
+
+spring:
+  jackson:
+    default-property-inclusion: non_empty
+  liquibase:
+    enabled: true
+  jpa:
+    generate-ddl: false
+    show-sql: true
+  datasource:
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME:com.mysql.jdbc.Driver}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/batch-scheduler?useSSL=false}
+
+# API Registry client configuration
+eureka:
+  instance:
+    metadata-map:
+      public: true
+      role: live
+    hostname: host.docker.internal
+    nonSecurePort: ${server.port}
+    healthCheckUrlPath: /actuator/health
+    statusPageUrlPath: /actuator/info
+
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# Configure Internal JWT handler
+sso:
+  jwt:
+    internal:
+      signature:
+        key:
+          type: ENV
+          value: SIG_SECRET_KEY
+
+# Spring health monitoring
+management:
+  health:
+    jms:
+     enabled: false
+
+
+backbase:
+  security:
+    mtls:
+      enabled: false
+    csrf:
+      enabled: false

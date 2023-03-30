@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "f4191b2d-7ccc-4494-8f7d-c6005fcd180b",
+		"name": "Schedule Batch Order History",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9844797"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Get Batch Order History",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/scheduler-batch-order-service/client-api/v1/scheduled-batch-orders/history?toExecutionDate=2023-02-19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"scheduler-batch-order-service",
+								"client-api",
+								"v1",
+								"scheduled-batch-orders",
+								"history"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"disabled": true
+								},
+								{
+									"key": "accountNumber",
+									"value": "107273145",
+									"disabled": true
+								},
+								{
+									"key": "createdBy",
+									"value": "mealscarla",
+									"disabled": true
+								},
+								{
+									"key": "batchOrderId",
+									"value": "0107b897-e93e-4fd6-9856-f751cc147132",
+									"disabled": true
+								},
+								{
+									"key": "fromExecutionDate",
+									"value": "2023-02-03",
+									"disabled": true
+								},
+								{
+									"key": "toExecutionDate",
+									"value": "2023-02-19"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dev",
+			"item": [
+				{
+					"name": "Get Batch Order History",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://dev-my.vantage.bank/api/scheduler-batch-order-service/client-api/v1/scheduled-batch-orders/history",
+							"protocol": "https",
+							"host": [
+								"dev-my",
+								"vantage",
+								"bank"
+							],
+							"path": [
+								"api",
+								"scheduler-batch-order-service",
+								"client-api",
+								"v1",
+								"scheduled-batch-orders",
+								"history"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "REJECTED",
+									"disabled": true
+								},
+								{
+									"key": "accountNumber",
+									"value": "107273145",
+									"disabled": true
+								},
+								{
+									"key": "createBy",
+									"value": "mealscarla",
+									"disabled": true
+								},
+								{
+									"key": "batchOrderId",
+									"value": "b29e0d52-d0ab-48cd-8f44-6a9f310f7797",
+									"disabled": true
+								},
+								{
+									"key": "fromExecutionDate",
+									"value": "2023-02-03",
+									"disabled": true
+								},
+								{
+									"key": "toExecutionDate",
+									"value": "2023-02-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "Get Batch Order History",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://test-my.vantage.bank/api/scheduler-batch-order-service/client-api/v1/scheduled-batch-orders/history?batchOrderId=b29e0d52-d0ab-48cd-8f44-6a9f310f7797",
+							"protocol": "https",
+							"host": [
+								"test-my",
+								"vantage",
+								"bank"
+							],
+							"path": [
+								"api",
+								"scheduler-batch-order-service",
+								"client-api",
+								"v1",
+								"scheduled-batch-orders",
+								"history"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "REJECTED",
+									"disabled": true
+								},
+								{
+									"key": "accountNumber",
+									"value": "107273145",
+									"disabled": true
+								},
+								{
+									"key": "createBy",
+									"value": "mealscarla",
+									"disabled": true
+								},
+								{
+									"key": "batchOrderId",
+									"value": "b29e0d52-d0ab-48cd-8f44-6a9f310f7797"
+								},
+								{
+									"key": "fromExecutionDate",
+									"value": "2023-02-03",
+									"disabled": true
+								},
+								{
+									"key": "toExecutionDate",
+									"value": "2023-02-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "uat",
+			"item": [
+				{
+					"name": "Get Batch Order History",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://uat-my.vantage.bank/api/scheduler-batch-order-service/client-api/v1/scheduled-batch-orders/history",
+							"protocol": "https",
+							"host": [
+								"uat-my",
+								"vantage",
+								"bank"
+							],
+							"path": [
+								"api",
+								"scheduler-batch-order-service",
+								"client-api",
+								"v1",
+								"scheduled-batch-orders",
+								"history"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "REJECTED",
+									"disabled": true
+								},
+								{
+									"key": "accountNumber",
+									"value": "107273145",
+									"disabled": true
+								},
+								{
+									"key": "createBy",
+									"value": "mealscarla",
+									"disabled": true
+								},
+								{
+									"key": "batchOrderId",
+									"value": "b29e0d52-d0ab-48cd-8f44-6a9f310f7797",
+									"disabled": true
+								},
+								{
+									"key": "fromExecutionDate",
+									"value": "2023-02-03",
+									"disabled": true
+								},
+								{
+									"key": "toExecutionDate",
+									"value": "2023-02-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "prod",
+			"item": [
+				{
+					"name": "Get Batch Order History",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://my.vantage.bank/api/scheduler-batch-order-service/client-api/v1/scheduled-batch-orders/history",
+							"protocol": "https",
+							"host": [
+								"my",
+								"vantage",
+								"bank"
+							],
+							"path": [
+								"api",
+								"scheduler-batch-order-service",
+								"client-api",
+								"v1",
+								"scheduled-batch-orders",
+								"history"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "REJECTED",
+									"disabled": true
+								},
+								{
+									"key": "accountNumber",
+									"value": "107273145",
+									"disabled": true
+								},
+								{
+									"key": "createBy",
+									"value": "mealscarla",
+									"disabled": true
+								},
+								{
+									"key": "batchOrderId",
+									"value": "b29e0d52-d0ab-48cd-8f44-6a9f310f7797",
+									"disabled": true
+								},
+								{
+									"key": "fromExecutionDate",
+									"value": "2023-02-03",
+									"disabled": true
+								},
+								{
+									"key": "toExecutionDate",
+									"value": "2023-02-01",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

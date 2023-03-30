@@ -1,0 +1,11 @@
+server:
+  port: 7439
+
+logging:
+  level:
+    root: INFO
+    com.backbase: DEBUG
+
+
+
+
